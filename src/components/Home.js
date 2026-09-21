@@ -1,11 +1,14 @@
-import React from 'react'
+import React ,{useContext} from "react";
+import noteContext from "../context/notes/NoteContext";
+import Notes from "./Notes";
 
 const Home = () => {
+
   return (
     <div>
-        This is home
+      <Notes/>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
