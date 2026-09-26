@@ -4,11 +4,12 @@ const AddNote = () => {
   const context = useContext(noteContext);
   const { addNote } = context;
 
-  const [note, setNote] = useState({title:"",description:"",tag:"default"})
+  const [note, setNote] = useState({title:"",description:"",tag:""})
 
   const handleClick = (e)=>{
     e.preventDefault();
     addNote(note.title,note.description,note.tag);
+    setNote({title:"",description:"",tag:""})
   }
 
   const onChange =(e)=>{
@@ -27,7 +28,8 @@ const AddNote = () => {
               type="text"
               className="form-control"
               id="title" name="title"
-              aria-describedby="emailHelp" onChange={onChange}
+              aria-describedby="emailHelp" onChange={onChange} required
+                    minLength={5} value={note.title}
             />
           </div>
           <div className="mb-3">
@@ -38,20 +40,21 @@ const AddNote = () => {
               type="text"
               className="form-control"
               id="description" name="description" onChange={onChange}
+              required
+              minLength={5} value={note.description}
             />
           </div>
-          <div className="mb-3 form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="exampleCheck1"
-            />
-            <label className="form-check-label" htmlFor="exampleCheck1">
-              Check me out
+          <div className="mb-3">
+            <label htmlFor="tag" className="form-label">
+              Tag
             </label>
-            2
+            <input
+              type="text"
+              className="form-control"
+              id="tag" name="description" onChange={onChange} value={note.tag}
+            />
           </div>
-          <button type="submit" className="btn btn-primary" onClick={handleClick}>
+          <button disabled={note.title<5 || note.description<5} type="submit" className="btn btn-primary" onClick={handleClick}>
             Add Note
           </button>
         </form>

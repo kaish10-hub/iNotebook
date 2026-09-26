@@ -66,8 +66,6 @@ router.put('/updatenote/:id',fetchuser,async (req,res)=>{
 
 // ROUTE 4: Delete a note using: DELETE "api/notes/deletenote". Login required.
 router.delete('/deletenote/:id',fetchuser,async (req,res)=>{
-    const {title,description,tag}=req.body;
-
     try{
         //Find the note to be deleted and delete it.
         let note= await Note.findById(req.params.id);
@@ -86,4 +84,5 @@ router.delete('/deletenote/:id',fetchuser,async (req,res)=>{
         res.status(500).send('Internal Server Error occured')
     }
 })
+
 module.exports = router
