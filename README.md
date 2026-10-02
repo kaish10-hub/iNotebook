@@ -417,107 +417,16 @@ This project helped me practice several important full-stack development concept
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
-Add screenshots of the application inside a `screenshots` folder.
-
-Recommended structure:
-
-```text
-screenshots/
-├── login.png
-├── signup.png
-├── home.png
-├── add-note.png
-└── api-testing.png
-```
-
-Then add them to this section:
-
-### Login
-
+### 🔐 Login
 ![Login](./screenshots/login.png)
 
-### Signup
-
+### 📝 Signup
 ![Signup](./screenshots/signup.png)
 
-### Notes Dashboard
-
-![Notes Dashboard](./screenshots/home.png)
-
-### Add Note
-
-![Add Note](./screenshots/add-note.png)
-
-### API Testing
-
-![API Testing](./screenshots/api-testing.png)
-
-> If the screenshots folder is not present in the repository yet, remove this section or add the screenshots later.
-
----
-
-# 📚 Learning Source
-
-This project was developed while following the **React.js playlist by CodeWithHarry**.
-
-The project helped me move from learning individual React concepts to building a complete full-stack application involving:
-
-```text
-React
-  ↓
-Context API
-  ↓
-REST APIs
-  ↓
-Node.js + Express
-  ↓
-MongoDB
-  ↓
-JWT Authentication
-  ↓
-CRUD Operations
-  ↓
-Complete Full-Stack Application
-```
-
----
-
-# 🚀 Future Improvements
-
-Possible improvements for future versions:
-
--  Dark Mode
--  Search Notes
--  Note Categories
--  Rich Text Editor
--  Password Reset
--  Email Verification
--  Profile Management
--  Pagination
--  Better form validation
--  Improved error handling
--  Production deployment
--  Improved mobile UI
-
----
-
-# 💻 Project Status
-
-🟢 **Completed**
-
-The core authentication and note-management functionality has been implemented, including:
-
-- User registration
-- User login
-- JWT authentication
-- Protected APIs
-- User data retrieval
-- Create notes
-- Read notes
-- Update notes
-- Delete notes
+### 🏠 Notes Dashboard
+![Notes Dashboard](./screenshots/dashboard.png)
 
 ---
 
